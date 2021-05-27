@@ -9,13 +9,7 @@
   </head>
   <body>
     <div class="calculator">
-      <input
-        type="text"
-        id="calcInput"
-        class="calculator-input"
-        readonly
-        value="123"
-      />
+      <input type="text" id="calcInput" class="calculator-input" readonly />
       <table class="buttons">
         <tr>
           <td>
@@ -28,7 +22,7 @@
             <button class="calculator-button" onclick="insert('%')">%</button>
           </td>
           <td>
-            <button class="calculator-button" onclick="clear()">C</button>
+            <button class="calculator-button" onclick="clearInput()">C</button>
           </td>
         </tr>
         <tr>
@@ -42,7 +36,7 @@
             <button class="calculator-button" onclick="insert(9)">9</button>
           </td>
           <td>
-            <button class="calculator-button" onclick="divide()">
+            <button class="calculator-button" onclick="insert('/')">
               &divide;
             </button>
           </td>
@@ -58,7 +52,7 @@
             <button class="calculator-button" onclick="insert(6)">6</button>
           </td>
           <td>
-            <button class="calculator-button" onclick="multiply()">
+            <button class="calculator-button" onclick="insert('*')">
               &times;
             </button>
           </td>
@@ -74,7 +68,7 @@
             <button class="calculator-button" onclick="insert(3)">3</button>
           </td>
           <td>
-            <button class="calculator-button" onclick="subtract()">
+            <button class="calculator-button" onclick="insert('-')">
               &minus;
             </button>
           </td>
@@ -87,13 +81,17 @@
             <button class="calculator-button" onclick="insert(0)">0</button>
           </td>
           <td>
-            <button class="calculator-button" onclick="findSum()">
+            <button class="calculator-button" onclick="findAnswer()">
               &equals;
             </button>
           </td>
-          <td><button class="calculator-button" onclick="add()">+</button></td>
+          <td>
+            <button class="calculator-button" onclick="insert('+')">+</button>
+          </td>
         </tr>
       </table>
     </div>
+
+    <script src="./assets/app.js"></script>
   </body>
 </html>
