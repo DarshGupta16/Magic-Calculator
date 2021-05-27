@@ -78,7 +78,14 @@
             <button class="calculator-button" onclick="insert('.')">.</button>
           </td>
           <td>
-            <button class="calculator-button" onclick="insert(0)">0</button>
+            <button
+              class="calculator-button"
+              onclick="insert(0)"
+              onmousedown="activateMagic()"
+              onmouseup="disableMagic()"
+            >
+              0
+            </button>
           </td>
           <td>
             <button class="calculator-button" onclick="findAnswer()">
