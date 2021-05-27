@@ -1,5 +1,6 @@
 let answer = null;
 const input = document.getElementById("calcInput");
+const activateBtn = document.getElementById("activateBtn");
 let pressTimer;
 
 const insert = (objToInsert) => {
@@ -21,6 +22,9 @@ const activateMagic = () => {
 const disableMagic = () => {
   clearTimeout(pressTimer);
 };
+
+activateBtn.addEventListener("touchstart", activateMagic);
+activateBtn.addEventListener("touchend", disableMagic);
 
 const findAnswer = () => {
   if (answer == null) {
